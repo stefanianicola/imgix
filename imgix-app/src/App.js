@@ -5,8 +5,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React from 'react';
 import Header from './components/Header/Header';
 import ImgDetail from './components/ImgContainer/ImgDetail/ImgDetail';
-import DataContextProvider from './context/DataContext';
 import ImgContainer from './components/ImgContainer/ImgContainer';
+import Footer from './components/Footer/Footer';
+import DataContextProvider from './context/DataContext';
+
 
 
 function App() {
@@ -14,9 +16,8 @@ function App() {
   return (
     <Router>
       <DataContextProvider>
-        <div className="App m-0 p-0" fluid>
+        <div className="App" fluid>
           <Header />
-
           <Switch>
             <Route path="/" exact>
               <ImgContainer />
@@ -25,6 +26,7 @@ function App() {
               <ImgDetail />
             </Route>
           </Switch>
+          <Footer/>
         </div>
       </DataContextProvider >
     </Router>

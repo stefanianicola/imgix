@@ -8,8 +8,8 @@ const ImproveImg = (props) => {
     const { addControl } = useContext(DataContext);
 
     return (
-        <div className="improves-content">
-            <Button variant="primary" onClick={()=>addControl(props.name)}>{props.name}</Button>
+        <div className="buttons">
+            <Button variant="link" className="d-block ml-2" onClick={()=>addControl(props.alias, props.min, props.max)}>{props.name}</Button>
         </div>
     )
 }

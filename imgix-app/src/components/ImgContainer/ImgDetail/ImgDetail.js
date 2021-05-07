@@ -1,51 +1,65 @@
 import React, { useContext, useState } from 'react';
 import './ImgDetail.scss';
 import { useParams } from 'react-router-dom';
-import { Row, Col, Image } from 'react-bootstrap';
+import { Row, Col, Image, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ImproveImg from '../ImproveImg/ImproveImg';
 import { DataContext } from '../../../context/DataContext';
 
 const ImgDetail = () => {
-    const [ajusteName, setAjusteName] = useState([])
-    const [ajusteValue, setAjusteValue] = useState([])
-    const { flag, btn } = useContext(DataContext)
+    const [params, setParams] = useState([]);
+    const { flag, btn, nameButtons } = useContext(DataContext)
     const { name } = useParams();
 
     const handlerValue = (e) => {
-        setAjusteName(e.target.name)
-        setAjusteValue(Number(e.target.value))
+        let param = [];
+        param.push(`${e.target.name}=${e.target.value}&`)
+        setParams(param);
     }
-
-    console.log(ajusteName, ajusteValue);
+console.log(params)
     return (
         <div className="wrap-actions-img">
             <Row>
                 <Col xs={3}>
-                    <ImproveImg name="con" />
+                    <div className="improves-content">
+                        {
+                            nameButtons.map((n) => {
+                                return <ImproveImg name={n.name} alias={n.alias} key={n.id} />
+                            })
+                        }
+                    </div>
                 </Col>
                 <Col xs={9}>
                     <div className="wrap-img">
                         {
-                            ajusteName.length > 0 ? (
+                            params.length > 0 ? (
                                 <Image alt=""
-                                    src={`https://assets.imgix.net/unsplash/${name}?${ajusteName}=${ajusteValue}`}
+                                    src={`https://assets.imgix.net/unsplash/${name}?${params}`}
                                     fluid
                                 />
                             ) : (
                                 <Image alt=""
-                                src={`https://assets.imgix.net/unsplash/${name}`}
-                                fluid
-                            />
+                                    src={`https://assets.imgix.net/unsplash/${name}`}
+                                    fluid
+                                />
                             )
                         }
 
 
                         {
                             flag && (
-                                <div>
-                                    <input type="number" name={`${btn}`} min="-100" max="100" step="1" onChange={handlerValue} />
-                                </div>
+                                <Form>
+                                    <Form.Group controlId="formBasicRange">
+                                        <Form.Label>{`${btn.name}`}</Form.Label>
+                                        <Form.Control type="range" 
+                                                    name={`${btn.alias}`} 
+                                                    min={`${btn.min}`} 
+                                                    max={`${btn.max}`} 
+                                                    onChange={handlerValue} />
+                                        <p className="minimo">{`${btn.min}`} </p>
+                                        <p className="maximo">{`${btn.max}`} </p>
+                                    </Form.Group>
+                                </Form>
                             )
 
                         }
