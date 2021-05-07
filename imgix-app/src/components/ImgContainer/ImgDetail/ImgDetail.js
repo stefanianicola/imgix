@@ -16,7 +16,7 @@ const ImgDetail = () => {
         param.push(`${e.target.name}=${e.target.value}&`)
         setParams(param);
     }
-console.log(params)
+
     return (
         <div className="wrap-actions-img">
             <Row>
