@@ -1,34 +1,22 @@
 @import "../../../sass/all";
-.wrap-actions-img{
-    .wrap-img{
-        width: 60%;
-        height: auto;
+.wrap-actions-img {
+    .row {
+        --bs-gutter-x: 0;
+    }
+    .wrap-img {
+        width: 90%;
+        display: flex;
+        //height: auto;
         margin: 20px auto;
-        color: seashell;
-        .form-group {
-            position: relative;
-            text-align: center;
-            margin-top: 60px;
-            font-weight: 100;
-            .form-label {
-                padding-right: 20px;
-            }
-           .form-control-range {
-               width: 80%;
-               height: 2px;
-               cursor: pointer;
-           }
-           .minimo, .maximo {
-               position: absolute;
-           }
-           .minimo {
-               left: 14%;
-           }
-           .maximo {
-               left: 94%;
-           }
+        & > img {
+            margin: 0 auto;
+            width: 100%;
         }
     }
-
+    .url-img {
+        text-align: center;
+        color: #fff;
+        font-weight: 100;
+    }
+   
 }
-

@@ -108,7 +108,7 @@ const Params = [
         "id": 14,
         "name": "Orientation",
         "alias": "orient",
-        "value": 0,
+        "value": [1,2,3,4,5,6,7,8,90,180,270],
         "min": 0,
         "max":270   
       },

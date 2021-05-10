@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <DataContextProvider>
-        <div className="App" fluid>
+        <div className="App">
           <Header />
           <Switch>
             <Route path="/" exact>

@@ -1,0 +1,23 @@
+.wrap-history {
+    position: relative;
+    margin: 50px 0;
+    .row-prev {
+        .btn {
+            color: #fff;
+            background-color:#f97641;
+            border: #f97641;
+            font-weight: 100;
+            padding: 0 10px;
+            margin-left: 50px;
+            i {
+                padding-right: 10px;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+            &:hover{
+                background-color: #D25135;
+            }
+        }
+    }
+}
