@@ -39,13 +39,15 @@ const ImgDetail = () => {
                     </div>
                     <div className="wrap-from">
                         {
-                            flag && <ControlParam />
+                            flag ? <ControlParam />
+                                : <p>Select control</p>
                         }
                     </div>
                     <div className="wrap-history">
                         {
                             params.length > 0 && <History />
                         }
+                        <a className="download btn" href={`https://assets.imgix.net/unsplash/${name}?${url}&w=400&dl=${name}`}>Download</a>
                     </div>
                 </Col>
 

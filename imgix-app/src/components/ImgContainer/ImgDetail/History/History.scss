@@ -20,4 +20,17 @@
             }
         }
     }
+    .download {
+        color: #fff;
+        background-color:#f97641;
+        border: #f97641;
+        font-weight: 100;
+        padding: 0 10px;
+        position: absolute;
+        bottom: 2px;
+        right: 50px;
+        &:hover{
+            background-color: #D25135;
+        }
+    }
 }
