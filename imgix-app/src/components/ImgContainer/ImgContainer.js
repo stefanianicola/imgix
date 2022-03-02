@@ -16,7 +16,7 @@ const ImgContainer = () => {
             {
                 loading ? (
                     <div className="text-center">
-                        <Spinner animation="grow" variant="info" size="sm"/>
+                        <Spinner animation="grow" variant="info" size="sm" />
                     </div>
                 )
                     : (
