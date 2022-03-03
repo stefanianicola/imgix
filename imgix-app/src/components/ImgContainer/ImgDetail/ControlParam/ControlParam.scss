@@ -1,7 +1,9 @@
+@import "../../../../sass//all";
 .wrap-from {
     color: seashell;
     text-align: center;
     font-weight: 100;
+    font-size: 12px;
     .dropdown {
         text-align: center;
         option {
@@ -27,7 +29,7 @@
             padding-right: 20px;
         }
         .form-control-range {
-            width: 80%;
+            width: 60%;
             height: 2px;
             cursor: pointer;
         }
@@ -36,10 +38,19 @@
             position: absolute;
         }
         .minimo {
-            left: 14%;
+            left: 20%;
+            @include respond-to(medium) {
+                left: 14%;
+            }
         }
         .maximo {
-            left: 94%;
+            right: 10%;
+            @include respond-to(medium) {
+                left: 94%;
+            }
         }
+    }
+    @include respond-to(medium) {
+        font-size: 1rem;
     }
 }

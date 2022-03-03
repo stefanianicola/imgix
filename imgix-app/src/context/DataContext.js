@@ -11,16 +11,16 @@ const DataContextProvider = (props) => {
     const [loading, setLoading] = useState(false);
     const [params, setParams] = useState([]);
     const [url, setUrl] = useState("");
-
+    const [hideMenu, setHideMenu] = useState(true);
 
     //consume photos API
     useEffect(() => {
         setLoading(true);
         try {
             axios("https://storage.googleapis.com/nanlabs-engineering-technical-interviews/imgix-samples-list.json")
-            .then((res) => {
-                setData(res.data);
-            })
+                .then((res) => {
+                    setData(res.data);
+                })
         } catch (error) {
             console.log(error);
         }
@@ -60,6 +60,7 @@ const DataContextProvider = (props) => {
         !isParam &&
             setParams([...aux, { alias, value }]);
         convertUrl();
+
     }
 
     //Convert the array of objects into a string to use as the url of the image
@@ -70,6 +71,14 @@ const DataContextProvider = (props) => {
 
         }
         setUrl(stringP);
+
+    }
+
+    //reset url with change img
+    const resetUrl = () => {
+        setUrl("");
+        setParams([]);
+        setFlag(false);
     }
 
     //delete the last parameter added
@@ -93,7 +102,10 @@ const DataContextProvider = (props) => {
                 setParams,
                 addParamUrl,
                 url,
-                removeItem
+                removeItem,
+                hideMenu,
+                setHideMenu,
+                resetUrl
             }}>
             {props.children}
         </DataContext.Provider>
