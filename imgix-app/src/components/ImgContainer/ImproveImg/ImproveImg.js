@@ -9,7 +9,7 @@ const ImproveImg = (props) => {
 
     return (
         <div className="buttons">
-            <Button variant="link" className="d-block ml-2" onClick={()=>addControl(props.alias, props.min, props.max)}>{props.name}</Button>
+            <Button variant="link" className="d-block ml-2" onClick={() => addControl(props.alias, props.min, props.max)}>{props.name}</Button>
         </div>
     )
 }

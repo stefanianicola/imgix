@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should be create the component 1`] = `
+<Col
+  className="p-0 head"
+  xs={12}
+>
+  <Navbar
+    collapseOnSelect={false}
+    expand="md"
+    variant="light"
+  >
+    <Col
+      className="wrap-logo"
+      xs={12}
+    >
+      <NavbarBrand>
+        <Link
+          to="/"
+        >
+          <img
+            alt=""
+            className="d-inline-block align-top"
+            height="30"
+            src="https://assets.imgix.net/presskit/imgix-presskit.pdf?page=3&fm=png&w=320&dpr=2"
+            width="auto"
+          />
+        </Link>
+      </NavbarBrand>
+    </Col>
+  </Navbar>
+</Col>
+`;

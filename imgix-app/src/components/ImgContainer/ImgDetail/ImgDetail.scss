@@ -1,22 +1,45 @@
 @import "../../../sass/all";
 .wrap-actions-img {
+    min-height: 100vh;
+
     .row {
         --bs-gutter-x: 0;
     }
     .wrap-img {
-        width: 90%;
         display: flex;
-        //height: auto;
-        margin: 20px auto;
-        & > img {
-            margin: 0 auto;
-            width: 100%;
+        margin: 50px;
+        min-height: 250px;
+        .wrap-loading {
+            color: #fff;
         }
+        section {
+            width: 100%;
+            @include respond-to(normal) {
+                width: 80%;
+            }
+        }
+
+        @include respond-to(medium) {
+            min-height: 400px;
+            padding-left: calc(100% - 80%);
+        }
+        @include respond-to(normal) {
+            min-height: 500px;
+        }
+    }
+
+    .burger-btn {
+        position: absolute;
+        top: 5px;
+        left: 5px;
     }
     .url-img {
         text-align: center;
         color: #fff;
         font-weight: 100;
+        font-size: 12px;
+        @include respond-to(medium) {
+            font-size: 1rem;
+        }
     }
-   
 }

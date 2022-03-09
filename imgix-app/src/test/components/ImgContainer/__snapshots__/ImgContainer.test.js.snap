@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImgContainer component should be create the component 1`] = `
+<div>
+  <div
+    className="justify-content-center m-0 p-0 row"
+  >
+    <div
+      className="img-content col-md-2 col-12"
+    >
+      <a
+        href="/alarmclock.jpg"
+        onClick={[Function]}
+      >
+        <img
+          height={220}
+          src="https://assets.imgix.net/unsplash/alarmclock.jpg?auto=format&ixlib=react-9.1.1&h=220&w=230"
+          srcSet="https://assets.imgix.net/unsplash/alarmclock.jpg?auto=format&ixlib=react-9.1.1&w=230&h=220&dpr=1&q=75 1x,
+https://assets.imgix.net/unsplash/alarmclock.jpg?auto=format&ixlib=react-9.1.1&w=230&h=220&dpr=2&q=50 2x,
+https://assets.imgix.net/unsplash/alarmclock.jpg?auto=format&ixlib=react-9.1.1&w=230&h=220&dpr=3&q=35 3x,
+https://assets.imgix.net/unsplash/alarmclock.jpg?auto=format&ixlib=react-9.1.1&w=230&h=220&dpr=4&q=23 4x,
+https://assets.imgix.net/unsplash/alarmclock.jpg?auto=format&ixlib=react-9.1.1&w=230&h=220&dpr=5&q=20 5x"
+          width={230}
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;

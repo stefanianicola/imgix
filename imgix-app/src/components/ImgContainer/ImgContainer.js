@@ -9,14 +9,14 @@ import Imgix from 'react-imgix';
 
 
 const ImgContainer = () => {
-    const { data, loading } = useContext(DataContext);
+    const { data, loading, resetUrl } = useContext(DataContext);
 
     return (
         <div>
             {
                 loading ? (
                     <div className="text-center">
-                        <Spinner animation="grow" variant="info" size="sm"/>
+                        <Spinner animation="grow" variant="info" size="sm" />
                     </div>
                 )
                     : (
@@ -25,7 +25,7 @@ const ImgContainer = () => {
                                 data.map((d, i) => {
                                     return (
                                         <Col xs={12} md={2} className="img-content" key={i}>
-                                            <Link to={`/${d.name}`}>
+                                            <Link to={`/${d.name}`} onClick={resetUrl}>
                                                 <Imgix src={d.url}
                                                     alt=""
                                                     width={230}

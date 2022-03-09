@@ -1,36 +1,42 @@
+@import "../../../../sass/all";
 .wrap-history {
     position: relative;
-    margin: 50px 0;
+    margin-top: 100px;
     .row-prev {
         .btn {
             color: #fff;
-            background-color:#f97641;
+            background-color: #f97641;
             border: #f97641;
             font-weight: 100;
             padding: 0 10px;
-            margin-left: 50px;
+            position: absolute;
+            bottom: 20px;
+            left: 50px;
             i {
                 padding-right: 10px;
             }
             &:focus {
                 box-shadow: none;
             }
-            &:hover{
-                background-color: #D25135;
+            &:hover {
+                background-color: #d25135;
             }
         }
     }
     .download {
         color: #fff;
-        background-color:#f97641;
+        background-color: #f97641;
         border: #f97641;
         font-weight: 100;
         padding: 0 10px;
         position: absolute;
-        bottom: 2px;
+        bottom: 20px;
         right: 50px;
-        &:hover{
-            background-color: #D25135;
+        &:hover {
+            background-color: #d25135;
         }
+    }
+    @include respond-to(medium) {
+        font-size: 1rem;
     }
 }

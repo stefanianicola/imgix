@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImgixLazy component should be create the component 1`] = `
+<img
+  className="imgSelected"
+  sizes="calc(10% - 10px)"
+  src="https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1"
+  srcSet="https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=100 100w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=116 116w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=135 135w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=156 156w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=181 181w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=210 210w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=244 244w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=283 283w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=328 328w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=380 380w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=441 441w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=512 512w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=594 594w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=689 689w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=799 799w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=927 927w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=1075 1075w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=1247 1247w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=1446 1446w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=1678 1678w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=1946 1946w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=2257 2257w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=2619 2619w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=3038 3038w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=3524 3524w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=4087 4087w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=4741 4741w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=5500 5500w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=6380 6380w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=7401 7401w,
+https://assets.imgix.net/unsplash/undefined?exp=11&=undefined&auto=format&ixlib=react-9.1.1&w=8192 8192w"
+/>
+`;
