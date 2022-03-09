@@ -3,6 +3,7 @@ import axios from 'axios';
 import Params from '../Data/Params';
 export const DataContext = createContext();
 
+
 const DataContextProvider = (props) => {
     const [data, setData] = useState([]);
     const [flag, setFlag] = useState(false);
@@ -11,7 +12,9 @@ const DataContextProvider = (props) => {
     const [loading, setLoading] = useState(false);
     const [params, setParams] = useState([]);
     const [url, setUrl] = useState("");
-    const [hideMenu, setHideMenu] = useState(true);
+    const [hideMenu, setHideMenu] = useState(false);
+
+    const urlImg = "https://assets.imgix.net/unsplash/";
 
     //consume photos API
     useEffect(() => {
@@ -105,7 +108,8 @@ const DataContextProvider = (props) => {
                 removeItem,
                 hideMenu,
                 setHideMenu,
-                resetUrl
+                resetUrl,
+                urlImg
             }}>
             {props.children}
         </DataContext.Provider>

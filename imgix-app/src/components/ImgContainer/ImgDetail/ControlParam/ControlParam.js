@@ -21,7 +21,7 @@ const ControlParam = () => {
     }
 
     return (
-        <div>
+        <>
             {
                 btn.alias === 'flip' ? (
                     <DropdownButton
@@ -70,7 +70,7 @@ const ControlParam = () => {
                 )
             }
 
-        </div>
+        </>
     )
 }
 export default ControlParam;

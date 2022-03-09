@@ -1,7 +1,5 @@
 import './App.scss';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import { Row } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import Header from './components/Header/Header';
 import ImgDetail from './components/ImgContainer/ImgDetail/ImgDetail';
@@ -26,7 +24,7 @@ function App() {
               <ImgDetail />
             </Route>
           </Switch>
-          <Footer/>
+          <Footer />
         </div>
       </DataContextProvider >
     </Router>

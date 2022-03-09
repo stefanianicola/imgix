@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImproveImg component should be create the component 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="d-block ml-2 btn btn-link"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+</div>
+`;

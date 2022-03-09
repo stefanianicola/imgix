@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, Suspense } from 'react';
 import './ImgDetail.scss';
 import { useParams } from 'react-router-dom';
 import { Row, Col, Button } from 'react-bootstrap';
@@ -7,12 +7,13 @@ import ImproveImg from '../ImproveImg/ImproveImg';
 import ControlParam from './ControlParam/ControlParam';
 import History from './History/History';
 import { DataContext } from '../../../context/DataContext';
-import Imgix from "react-imgix";
 import 'font-awesome/css/font-awesome.min.css';
 
 const ImgDetail = () => {
-    const { flag, nameButtons, url, params, hideMenu, setHideMenu } = useContext(DataContext)
+    const { urlImg, flag, nameButtons, url, params, hideMenu, setHideMenu } = useContext(DataContext);
     const { name } = useParams();
+
+    const ImgixLazy = React.lazy(() => import('./ImgixLazy/ImgixLazy.js'));
 
     const handleHideMenu = () => {
         if (!hideMenu) {
@@ -21,7 +22,6 @@ const ImgDetail = () => {
             setHideMenu(false)
         }
     }
-
 
 
     return (
@@ -52,14 +52,19 @@ const ImgDetail = () => {
 
                 <Col xs={12} md={10} className="p-0">
                     <div className="wrap-img">
-                        <Imgix alt=""
-                            src={`https://assets.imgix.net/unsplash/${name}?${url}`}
-                            sizes="calc(10% - 10px)"
-                        />
+                        <Suspense fallback={
+                            <div className="wrap-loading">
+                                <p>LOADING...</p>
+                            </div>
+                        }>
+                            <section>
+                                <ImgixLazy className="imgLazy" />
+                            </section>
+                        </Suspense>
 
                     </div>
                     <div>
-                        <p className="url-img">{`https://assets.imgix.net/unsplash/${name}?${url}`}</p>
+                        <p className="url-img">{`${urlImg}${name}?${url}`}</p>
                     </div>
                     <div className="wrap-from">
                         {
@@ -71,7 +76,7 @@ const ImgDetail = () => {
                         {
                             params.length > 0 && <History />
                         }
-                        <a className="download btn" href={`https://assets.imgix.net/unsplash/${name}?${url}&w=400&dl=${name}`}>Download</a>
+                        <a className="download btn" href={`${urlImg}${name}?${url}&w=400&dl=${name}`}>Download</a>
                     </div>
                 </Col>
 

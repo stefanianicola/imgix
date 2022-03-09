@@ -1,10 +1,10 @@
 import React from 'react';
 import './Footer.scss';
 
- const Footer = ()=>{
+const Footer = () => {
     return (
         <div className="foot">
-            <p>Stefania Nicola 2021</p>
+            <p>Stefania Nicola 2022</p>
         </div>
     )
 }

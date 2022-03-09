@@ -8,12 +8,23 @@
     .wrap-img {
         display: flex;
         margin: 50px;
-        & > img {
-            margin: 0 auto;
-            width: 100%;
+        min-height: 250px;
+        .wrap-loading {
+            color: #fff;
         }
+        section {
+            width: 100%;
+            @include respond-to(normal) {
+                width: 80%;
+            }
+        }
+
         @include respond-to(medium) {
-            padding-left: 100px;
+            min-height: 400px;
+            padding-left: calc(100% - 80%);
+        }
+        @include respond-to(normal) {
+            min-height: 500px;
         }
     }
 
